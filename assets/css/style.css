@@ -5,7 +5,8 @@ body {
 header {
     text-align: center;
     background-color: goldenrod;
-    padding: 10px;
+    padding: 20px;
+    font-style: italic;
 }
 
 h2, textarea, button {
@@ -13,3 +14,39 @@ h2, textarea, button {
     margin: 10px;
 }
 
+span {
+    font-size: 48px;
+}
+
+.card {
+    border: 2px solid black;
+    padding: 15px;
+    margin: 15px;  
+}
+
+.currentForecast {
+    border: 2px solid black;
+    padding: 10px;
+    text-shadow: 2px;
+    font-weight: bold;
+}
+
+#searchandstore {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 3px black;
+    font-size: 24px;
+}
+
+#recentsearches {
+    list-style: none;
+    font-size: 30px;
+    padding: 10px;
+    border: 2px black solid;
+    background-color: goldenrod;
+}
+
+#history {
+    border: 2px black solid;
+}
