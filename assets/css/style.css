@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: goldenrod;
+    padding: 10px;
+}
+
+h2, textarea, button {
+    padding: 4px;
+    margin: 10px;
+}
+
