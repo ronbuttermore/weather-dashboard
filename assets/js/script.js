@@ -23,7 +23,7 @@ searchBtn.on("click", function() {
     nameToCoordinates(userInput.val());
     $(".history").on("click", function() {
         clickedSearch = $(this).text();
-        currentCity.text(clickedSearch);
+        currentCity.text(clickedSearch) + " (" + dayjs().format("MMM D, YYYY") + ")";
         nameToCoordinates(clickedSearch);
     });
 });
