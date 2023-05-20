@@ -74,13 +74,14 @@ function getFuture() {
             return response.json();
         })
         .then(function(data){
-            $("#day1date").text("Date: " + data.list[1]["dt_txt"]);
-            $("#day2date").text("Date: " + data.list[2]["dt_txt"]);
-            $("#day3date").text("Date: " + data.list[3]["dt_txt"]);
-            $("#day4date").text("Date: " + data.list[4]["dt_txt"]);
-            $("#day5date").text("Date: " + data.list[5]["dt_txt"]);
             console.log(data);
-            var condition = data.list[0]["weather"][0]["main"];
+            $("#day1date").text("Date: " + data.list[4]["dt_txt"]);
+            $("#day2date").text("Date: " + data.list[12]["dt_txt"]);
+            $("#day3date").text("Date: " + data.list[20]["dt_txt"]);
+            $("#day4date").text("Date: " + data.list[28]["dt_txt"]);
+            $("#day5date").text("Date: " + data.list[36]["dt_txt"]);
+            console.log(data);
+            var condition = data.list[4]["weather"][0]["main"];
             if (condition === "Clouds") {
                 $("#icon1").text("☁️");
             } else if (condition === "Clear") {
@@ -90,7 +91,7 @@ function getFuture() {
             } else if (condition === "Snow") {
                 $("#icon1").text("❄️");
             }
-            var condition = data.list[1]["weather"][0]["main"];
+            var condition = data.list[12]["weather"][0]["main"];
             if (condition === "Clouds") {
                 $("#icon2").text("☁️");
             } else if (condition === "Clear") {
@@ -100,7 +101,7 @@ function getFuture() {
             } else if (condition === "Snow") {
                 $("#icon2").text("❄️");
             }
-            var condition = data.list[2]["weather"][0]["main"];
+            var condition = data.list[20]["weather"][0]["main"];
             if (condition === "Clouds") {
                 $("#icon3").text("☁️");
             } else if (condition === "Clear") {
@@ -110,7 +111,7 @@ function getFuture() {
             } else if (condition === "Snow") {
                 $("#icon3").text("❄️");
             }
-            var condition = data.list[3]["weather"][0]["main"];
+            var condition = data.list[28]["weather"][0]["main"];
             if (condition === "Clouds") {
                 $("#icon4").text("☁️");
             } else if (condition === "Clear") {
@@ -120,7 +121,7 @@ function getFuture() {
             } else if (condition === "Snow") {
                 $("#icon4").text("❄️");
             }
-            var condition = data.list[4]["weather"][0]["main"];
+            var condition = data.list[36]["weather"][0]["main"];
             if (condition === "Clouds") {
                 $("#icon5").text("☁️");
             } else if (condition === "Clear") {
@@ -130,20 +131,20 @@ function getFuture() {
             } else if (condition === "Snow") {
                 $("#icon5").text("❄️");
             }
-            $("#day1temp").text("Temp: " + data.list[1]["main"]["temp"] + "°F");
-            $("#day2temp").text("Temp: " + data.list[2]["main"]["temp"] + "°F");
-            $("#day3temp").text("Temp: " + data.list[3]["main"]["temp"] + "°F");
-            $("#day4temp").text("Temp: " + data.list[4]["main"]["temp"] + "°F");
-            $("#day5temp").text("Temp: " + data.list[5]["main"]["temp"] + "°F");
-            $("#day1humidity").text("Humidity: " + data.list[1]["main"]["humidity"] + "%");
-            $("#day2humidity").text("Humidity: " + data.list[2]["main"]["humidity"] + "%");
-            $("#day3humidity").text("Humidity: " + data.list[3]["main"]["humidity"] + "%");
-            $("#day4humidity").text("Humidity: " + data.list[4]["main"]["humidity"] + "%");
-            $("#day5humidity").text("Humidity: " + data.list[5]["main"]["humidity"] + "%");
-            $("#day1wind").text("Wind speed: " + data.list[1]["wind"]["speed"] + " MPH");
-            $("#day2wind").text("Wind speed: " + data.list[2]["wind"]["speed"] + " MPH");
-            $("#day3wind").text("Wind speed: " + data.list[3]["wind"]["speed"] + " MPH");
-            $("#day4wind").text("Wind speed: " + data.list[4]["wind"]["speed"] + " MPH");
-            $("#day5wind").text("Wind speed: " + data.list[5]["wind"]["speed"] + " MPH");
+            $("#day1temp").text("Temp: " + data.list[4]["main"]["temp"] + "°F");
+            $("#day2temp").text("Temp: " + data.list[12]["main"]["temp"] + "°F");
+            $("#day3temp").text("Temp: " + data.list[20]["main"]["temp"] + "°F");
+            $("#day4temp").text("Temp: " + data.list[28]["main"]["temp"] + "°F");
+            $("#day5temp").text("Temp: " + data.list[36]["main"]["temp"] + "°F");
+            $("#day1humidity").text("Humidity: " + data.list[4]["main"]["humidity"] + "%");
+            $("#day2humidity").text("Humidity: " + data.list[12]["main"]["humidity"] + "%");
+            $("#day3humidity").text("Humidity: " + data.list[20]["main"]["humidity"] + "%");
+            $("#day4humidity").text("Humidity: " + data.list[28]["main"]["humidity"] + "%");
+            $("#day5humidity").text("Humidity: " + data.list[36]["main"]["humidity"] + "%");
+            $("#day1wind").text("Wind speed: " + data.list[4]["wind"]["speed"] + " MPH");
+            $("#day2wind").text("Wind speed: " + data.list[12]["wind"]["speed"] + " MPH");
+            $("#day3wind").text("Wind speed: " + data.list[20]["wind"]["speed"] + " MPH");
+            $("#day4wind").text("Wind speed: " + data.list[28]["wind"]["speed"] + " MPH");
+            $("#day5wind").text("Wind speed: " + data.list[36]["wind"]["speed"] + " MPH");
         })
 }
