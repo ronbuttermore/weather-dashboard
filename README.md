@@ -1,2 +1,8 @@
-# weather-dashboard
-DU Coding Bootcamp Challenge 6
+# Weather Dashboard
+
+## Description
+This web application was built for 
+
+## Usage
+
+## License
