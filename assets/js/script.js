@@ -42,7 +42,7 @@ function nameToCoordinates(inputedCity) {
 }
 
 function getWeather() {
-    var currentWeather = "https://api.openweathermap.org/data/2.5/weather?lat=" + cityLat + "&lon=" + cityLon + "&appid=843b2fcaeb6b2418f5895c61c7166fcb";
+    var currentWeather = "https://api.openweathermap.org/data/2.5/weather?lat=" + cityLat + "&lon=" + cityLon + "&units=imperial&appid=843b2fcaeb6b2418f5895c61c7166fcb";
 
     fetch(currentWeather)
         .then(function(response) {
@@ -56,12 +56,32 @@ function getWeather() {
 }
 
 function getFuture() {
-    var futureForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLon + "&appid=843b2fcaeb6b2418f5895c61c7166fcb";
+    var futureForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLon + "&units=imperial&appid=843b2fcaeb6b2418f5895c61c7166fcb";
     fetch(futureForecast)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
+            $("#day1date").text("Date: " + data.list[1]["dt_txt"]);
+            $("#day2date").text("Date: " + data.list[2]["dt_txt"]);
+            $("#day3date").text("Date: " + data.list[3]["dt_txt"]);
+            $("#day4date").text("Date: " + data.list[4]["dt_txt"]);
+            $("#day5date").text("Date: " + data.list[5]["dt_txt"]);
             console.log(data);
+            $("#day1temp").text("Temp: " + data.list[1]["main"]["temp"]);
+            $("#day2temp").text("Temp: " + data.list[2]["main"]["temp"]);
+            $("#day3temp").text("Temp: " + data.list[3]["main"]["temp"]);
+            $("#day4temp").text("Temp: " + data.list[4]["main"]["temp"]);
+            $("#day5temp").text("Temp: " + data.list[5]["main"]["temp"]);
+            $("#day1humidity").text("Humidity: " + data.list[1]["main"]["humidity"]);
+            $("#day2humidity").text("Humidity: " + data.list[2]["main"]["humidity"]);
+            $("#day3humidity").text("Humidity: " + data.list[3]["main"]["humidity"]);
+            $("#day4humidity").text("Humidity: " + data.list[4]["main"]["humidity"]);
+            $("#day5humidity").text("Humidity: " + data.list[5]["main"]["humidity"]);
+            $("#day1wind").text("Wind: " + data.list[1]["main"]["humidity"]);
+            $("#day2wind").text("Wind: " + data.list[2]["main"]["humidity"]);
+            $("#day3wind").text("Wind: " + data.list[3]["main"]["humidity"]);
+            $("#day4wind").text("Wind: " + data.list[4]["main"]["humidity"]);
+            $("#day5wind").text("Wind: " + data.list[5]["main"]["humidity"]);
         })
 }
