@@ -29,7 +29,7 @@ searchBtn.on("click", function() {
 });
 
 function nameToCoordinates(inputedCity) {
-    var geocodingURL = "http://api.openweathermap.org/geo/1.0/direct?q="+ inputedCity + "&limit=1&appid=843b2fcaeb6b2418f5895c61c7166fcb";
+    var geocodingURL = "https://api.openweathermap.org/geo/1.0/direct?q="+ inputedCity + "&limit=1&appid=843b2fcaeb6b2418f5895c61c7166fcb";
     
     fetch(geocodingURL)
         .then(function(response) {
