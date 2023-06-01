@@ -1,9 +1,12 @@
 # Weather Dashboard
 
 ## Description
-This web application was built for 
+This web application was built for users who want to see the current weather and 5-day forecast in different cities. The application allows the users to easily return to previous cities that they have viewed using a storage menu that the user can utilize to easily switch between viewing the weather in various cities.
 
 ## Usage
+The weather application can be found on the web by navigating to https://ronbuttermore.github.io/weather-dashboard/. In order to see the current weather and 5-day forecast in a specified city, the user will first type their desired city to view into the search bar, and then click the "Search Button". They will see the current weather and 5-day forecast, and their city will be saved on the left hand side. To search for another city, simply type in a new name in the search bar and click "Search" again. To view a previous city, the user can simply click on one of the recently stored cities on the left part of the page.
+
+![A screenshot of the weather dashboard application](screenshot.PNG)
 
 ## License
 MIT License
